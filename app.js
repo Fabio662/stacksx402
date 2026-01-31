@@ -8,6 +8,7 @@ filterButtons.forEach(button => {
     button.addEventListener('click', () => {
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
+        
         const category = button.dataset.category;
         
         serviceCards.forEach(card => {
@@ -21,11 +22,11 @@ filterButtons.forEach(button => {
     });
 });
 
-// Form submission — now using right ID
-const submitForm = document.getElementById('submit-form');  // ← fixed: submit-form
+// Form submission — fixed ID + short alert
+const submitForm = document.getElementById('submit-form');
 
 if (submitForm) {
-    submitForm.addEventListener('submit', async (e) => {
+    submitForm.addEventListener('submit', (e) => {
         e.preventDefault();
         alert('Thanks. We\'ll review your service soon.');
         submitForm.reset();
@@ -33,8 +34,8 @@ if (submitForm) {
 }
 
 // Smooth scroll
-document.querySelectorAll('a ').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
@@ -54,17 +55,16 @@ function updateServiceCount() {
 updateServiceCount();
 
 // Scroll animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.animation = 'fadeIn 0.6s ease-out';
         }
     });
-}, observerOptions);
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+});
 
 document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
@@ -74,12 +74,11 @@ document.querySelectorAll('section').forEach(section => {
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section ');
     const navLinks = document.querySelectorAll('.nav-link');
-    let current = '';
     
+    let current = '';
     sections.forEach(section => {
-        const top = section.offsetTop - 100;
-        if (window.pageYOffset >= top) {
-            current = section.getAttribute('id');
+        if (window.pageYOffset >= section.offsetTop - 100) {
+            current = section.id;
         }
     });
     
@@ -92,15 +91,10 @@ window.addEventListener('scroll', () => {
 });
 
 // Console egg
-console.log(`
-%c🟧 StacksX402 %c
-%cThe x402 Directory for Stacks%c
-
-Submit service: ${window.location.origin}#submit
-
-Built with 🟧
-`, 
-'background: linear-gradient(135deg, #5546FF 0%, #FC6432 100%); color: white; font-size: 20px; font-weight: bold; padding: 10px;',
-'',
-'color: #5546FF; font-size: 14px;',
-'');
+console.log(
+  '%c🟧 StacksX402%c The x402 Directory for Stacks %cSubmit: ' + window.location.origin + '#submit %cBuilt with 🟧',
+  'background: linear-gradient(135deg, #5546FF 0%, #FC6432 100%); color: white; font-size: 20px; font-weight: bold; padding: 10px;',
+  '',
+  'color: #5546FF; font-size: 14px;',
+  ''
+);
