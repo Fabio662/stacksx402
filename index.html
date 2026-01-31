@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StacksX402 - The x402 Directory for Stacks Blockchain</title>
+    <title>402 Services - The x402 Directory for Stacks Blockchain</title>
     <meta name="description" content="Discover pay-per-use x402 services on Stacks. No subscriptions, no API keys. Just Bitcoin micro-payments.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🟧</text></svg>">
     <link rel="stylesheet" href="styles.css">
@@ -15,7 +15,7 @@
             <div class="header-content">
                 <div class="logo">
                     <span class="logo-icon">🟧</span>
-                    <span class="logo-text">StacksX402</span>
+                    <span class="logo-text">402 Services</span>
                 </div>
                 <nav class="nav">
                     <a href="#services" class="nav-link">Services</a>
@@ -39,7 +39,7 @@
                 </p>
                 <div class="hero-stats">
                     <div class="stat">
-                        <div class="stat-value" id="serviceCount">1</div>
+                        <div class="stat-value" id="serviceCount">2</div>
                         <div class="stat-label">Active Services</div>
                     </div>
                     <div class="stat">
@@ -171,230 +171,11 @@
                         Try Service →
                     </a>
                 </div>
-                
-                <!-- Placeholder Cards -->
-                <div class="service-card placeholder" data-category="all">
+
+                <!-- Recruit Agent Card -->
+                <div class="service-card" data-category="ai">
                     <div class="service-header">
-                        <div class="service-icon">📊</div>
+                        <div class="service-icon">🔧</div>
+                        <div class="verified-badge">✓</div>
                     </div>
-                    <h3 class="service-name">Your Service Here</h3>
-                    <p class="service-description">Submit your x402 service to be listed in this directory</p>
-                    <div class="service-meta">
-                        <span class="meta-item">
-                            <span class="meta-label">Cost:</span>
-                            <span class="meta-value">Free listing</span>
-                        </span>
-                    </div>
-                    <a href="#submit" class="service-link">
-                        Submit Service →
-                    </a>
-                </div>
-                
-                <div class="service-card placeholder" data-category="all">
-                    <div class="service-header">
-                        <div class="service-icon">🔮</div>
-                    </div>
-                    <h3 class="service-name">Coming Soon</h3>
-                    <p class="service-description">More x402 services launching on Stacks blockchain</p>
-                    <div class="service-meta">
-                        <span class="meta-item">
-                            <span class="meta-label">Status:</span>
-                            <span class="meta-value">In Development</span>
-                        </span>
-                    </div>
-                    <a href="#submit" class="service-link">
-                        Be the Next →
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About x402 -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <h2 class="about-title">What is x402?</h2>
-                    <p class="about-text">
-                        x402 is a protocol that enables pay-per-use APIs with Bitcoin micro-payments. 
-                        Instead of monthly subscriptions and API keys, services return HTTP 402 (Payment Required) 
-                        with payment details. Users pay with sBTC and get instant access.
-                    </p>
-                    <div class="about-features">
-                        <div class="feature">
-                            <div class="feature-icon">🔓</div>
-                            <div class="feature-content">
-                                <h4>No Signup</h4>
-                                <p>No accounts, no registration, no friction</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">💰</div>
-                            <div class="feature-content">
-                                <h4>Pay Per Use</h4>
-                                <p>Only pay for what you use, when you use it</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">⚡</div>
-                            <div class="feature-content">
-                                <h4>Instant Access</h4>
-                                <p>Send payment, get data immediately</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">🤖</div>
-                            <div class="feature-content">
-                                <h4>AI Agent Ready</h4>
-                                <p>Perfect for autonomous agents and bots</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-visual">
-                    <div class="flow-diagram">
-                        <div class="flow-step">
-                            <div class="flow-number">1</div>
-                            <div class="flow-text">Request Data</div>
-                        </div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-step">
-                            <div class="flow-number">2</div>
-                            <div class="flow-text">Get 402 + Payment Info</div>
-                        </div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-step">
-                            <div class="flow-number">3</div>
-                            <div class="flow-text">Send sBTC Payment</div>
-                        </div>
-                        <div class="flow-arrow">↓</div>
-                        <div class="flow-step">
-                            <div class="flow-number">4</div>
-                            <div class="flow-text">Receive Data</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Submit Section -->
-    <section id="submit" class="submit">
-        <div class="container">
-            <div class="submit-card">
-                <h2 class="submit-title">Submit Your x402 Service</h2>
-                <p class="submit-description">
-                    Building an x402 service on Stacks? Get listed in the directory and reach more users.
-                </p>
-                
-                <form class="submit-form" id="submitForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="serviceName">Service Name</label>
-                            <input type="text" id="serviceName" name="serviceName" required placeholder="YieldAgent">
-                        </div>
-                        <div class="form-group">
-                            <label for="serviceEndpoint">Endpoint URL</label>
-                            <input type="url" id="serviceEndpoint" name="serviceEndpoint" required placeholder="https://your-service.workers.dev">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="serviceDescription">Description</label>
-                        <textarea id="serviceDescription" name="serviceDescription" required placeholder="Brief description of your service..."></textarea>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="serviceCategory">Category</label>
-                            <select id="serviceCategory" name="serviceCategory" required>
-                                <option value="">Select category</option>
-                                <option value="defi">DeFi</option>
-                                <option value="nft">NFTs</option>
-                                <option value="data">Data</option>
-                                <option value="ai">AI</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="serviceCost">Cost per Request</label>
-                            <input type="text" id="serviceCost" name="serviceCost" required placeholder="0.0001 sBTC">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="contactEmail">Contact Email</label>
-                        <input type="email" id="contactEmail" name="contactEmail" required placeholder="you@example.com">
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-large">
-                        Submit for Review
-                    </button>
-                    
-                    <p class="form-note">
-                        All submissions are manually reviewed. We'll get back to you within 48 hours.
-                    </p>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <span class="logo-icon">🟧</span>
-                        <span class="logo-text">StacksX402</span>
-                    </div>
-                    <p class="footer-description">
-                        The curated directory of x402 services on Stacks blockchain. 
-                        Empowering pay-per-use APIs with Bitcoin.
-                    </p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://docs.stacks.co">Stacks Docs</a></li>
-                        <li><a href="https://www.stacks.co/sbtc">sBTC Info</a></li>
-                        <li><a href="https://x402.org">x402 Protocol</a></li>
-                        <li><a href="https://github.com">GitHub</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">Community</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://discord.gg/stacks">Discord</a></li>
-                        <li><a href="https://twitter.com">Twitter</a></li>
-                        <li><a href="https://reddit.com/r/stacks">Reddit</a></li>
-                        <li><a href="#submit">Submit Service</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">Legal</h4>
-                    <ul class="footer-links">
-                        <li><a href="#terms">Terms of Use</a></li>
-                        <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#disclaimer">Disclaimer</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 StacksX402. Built with 🟧 for the Stacks community.</p>
-                <p class="footer-note">
-                    Not affiliated with Stacks Foundation. All services listed are independently operated.
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="app.js"></script>
-</body>
-</html>
+                    <h3 class="service-name">Recruit Agent</h3
