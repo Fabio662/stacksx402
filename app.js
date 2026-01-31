@@ -28,14 +28,14 @@ const submitForm = document.getElementById('submit-form');
 if (submitForm) {
     submitForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Thanks. We\'ll review your service soon.');
+        alert("Thanks. We'll review your service soon.");
         submitForm.reset();
     });
 }
 
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
+// Smooth scroll for navigation
+document.querySelectorAll('a ').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
@@ -44,7 +44,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Update service count
+// Update service count dynamically
 function updateServiceCount() {
     const realServices = document.querySelectorAll('.service-card:not(.placeholder)');
     const countElement = document.getElementById('serviceCount');
@@ -54,7 +54,7 @@ function updateServiceCount() {
 }
 updateServiceCount();
 
-// Scroll animations
+// Add animation on scroll
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -70,14 +70,15 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Active nav
+// Active nav based on scroll
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section ');
     const navLinks = document.querySelectorAll('.nav-link');
     
     let current = '';
     sections.forEach(section => {
-        if (window.pageYOffset >= section.offsetTop - 100) {
+        const sectionTop = section.offsetTop - 100;
+        if (window.pageYOffset >= sectionTop) {
             current = section.id;
         }
     });
@@ -90,9 +91,9 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Console egg
+// Console easter egg
 console.log(
-  '%c🟧 StacksX402%c The x402 Directory for Stacks %cSubmit: ' + window.location.origin + '#submit %cBuilt with 🟧',
+  '%c🟧 StacksX402 %cThe x402 Directory for Stacks %cSubmit service: ' + window.location.origin + '#submit %cBuilt with 🟧',
   'background: linear-gradient(135deg, #5546FF 0%, #FC6432 100%); color: white; font-size: 20px; font-weight: bold; padding: 10px;',
   '',
   'color: #5546FF; font-size: 14px;',
